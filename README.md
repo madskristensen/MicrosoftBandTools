@@ -6,7 +6,7 @@ for writing Web Tiles for the Microsoft Band.
 [![Build status](https://ci.appveyor.com/api/projects/status/k72bv74jviitnejx?svg=true)](https://ci.appveyor.com/project/madskristensen/microsoftbandtools)
 
 Download the extension at the
-[VS Gallery](https://visualstudiogallery.msdn.microsoft.com/3b329021-cd7a-4a01-86fc-714c2d05bb6c)
+[VS Gallery](https://visualstudiogallery.msdn.microsoft.com/b3f06ea7-06ad-4f4d-83f1-27be49bf2987)
 or get the
 [nightly build](http://vsixgallery.com/extension/74cd5721-9cfd-4183-b1c9-b051f1b59503/)
 
