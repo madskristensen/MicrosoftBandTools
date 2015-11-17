@@ -10,14 +10,25 @@ Download the extension at the
 or get the
 [nightly build](http://vsixgallery.com/extension/74cd5721-9cfd-4183-b1c9-b051f1b59503/)
 
+## Features
 
-### Schema Intellisense
+1. Intellisense
+  - Based on the schema
+  - For custom icons
+2. Valdation
+  - Against the schema
+  - Icon file paths
+  - Undeclared icons
+
+## Intellisense
+
+### Schema based
 You get full Intellisense for the manifest.json file due
 to the automatic schema resolver in this extension.
 
 ![Schema Intellisense](art/schema-intellisense.png)
 
-### Icon Intellisense
+### Custom icons
 Get customized Intellisense for the icons you have already
 registered.
 
@@ -25,7 +36,21 @@ registered.
 
 This makes it really easy to see what's going on.
 
-### Validation
+## Validation
+
+### Schema validation
 Validation helps catch common mistakes and typos.
 
 ![Validation](art/validation.png)
+
+### Icon file paths
+Make sure the icon files you are referencing actually
+exist.
+
+![Validation](art/validation-icon-file-path.png)
+
+### Undeclared icons
+Check that all referenced icons have been declared
+before use.
+
+![Validation](art/validation-icon-unknown.png)

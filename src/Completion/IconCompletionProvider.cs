@@ -30,33 +30,46 @@ namespace MicrosoftBandTools
             if (member == null || member.UnquotedNameText != "icon")
                 yield break;
 
-            var visitor = new JSONItemCollector<JSONMember>(true);
+            string folder = Path.GetDirectoryName(member.JSONDocument.DocumentLocation);
 
-            if (!member.JSONDocument.Accept(visitor))
-                yield break;
+            foreach (var icon in GetIcons(member))
+            {
+                string path = Path.Combine(folder, icon.Value);
+
+                if (File.Exists(path))
+                {
+                    var image = BitmapFrame.Create(new Uri(path, UriKind.Absolute));
+                    yield return new SimpleCompletionEntry(icon.Key, "\"" + icon.Key + "\"", image, context.Session);
+                }
+                else
+                {
+                    yield return new SimpleCompletionEntry(icon.Key, "\"" + icon.Key + "\"", "\"" + icon.Value + "\"", context.Session);
+                }
+            }
+        }
+
+        public static IDictionary<string, string> GetIcons(JSONParseItem item)
+        {
+            var visitor = new JSONItemCollector<JSONMember>(true);
+            var dic = new Dictionary<string, string>();
+
+            if (!item.JSONDocument.Accept(visitor))
+                return null;
 
             var icons = visitor.Items.FirstOrDefault(m => m.UnquotedNameText == "icons");
             var value = icons?.Value as JSONObject;
 
             if (value == null)
-                yield break;
+                return null;
 
-            string folder = Path.GetDirectoryName(member.JSONDocument.DocumentLocation);
+            string folder = Path.GetDirectoryName(item.JSONDocument.DocumentLocation);
 
             foreach (JSONMember icon in value.Children.OfType<JSONMember>())
             {
-                string path = Path.Combine(folder, icon.UnquotedValueText);
-
-                if (File.Exists(path))
-                {
-                    var image = BitmapFrame.Create(new Uri(path, UriKind.Absolute));
-                    yield return new SimpleCompletionEntry(icon.UnquotedNameText, icon.Name.Text, image, context.Session);
-                }
-                else
-                {
-                    yield return new SimpleCompletionEntry(icon.UnquotedNameText, icon.Name.Text, icon.Value.Text, context.Session);
-                }
+                dic.Add(icon.UnquotedNameText, icon.UnquotedValueText);
             }
+
+            return dic;
         }
 
         private static bool IsBandManifest(JSONParseItem item)

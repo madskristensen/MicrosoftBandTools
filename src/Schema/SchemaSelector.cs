@@ -10,7 +10,6 @@ namespace MicrosoftBandTools
     [Export(typeof(IJSONSchemaSelector))]
     class SchemaSelector : IJSONSchemaSelector
     {
-        public event EventHandler AvailableSchemasChanged;
         private const string URL = "http://json.schemastore.org/band-manifest";
 
         public async Task<IEnumerable<string>> GetAvailableSchemasAsync()
@@ -46,6 +45,12 @@ namespace MicrosoftBandTools
             }
 
             return false;
+        }
+
+        public event EventHandler AvailableSchemasChanged
+        {
+            add { }
+            remove { }
         }
     }
 }
