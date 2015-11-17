@@ -1,11 +1,13 @@
 ﻿using System;
 using System.Runtime.InteropServices;
 using Microsoft.VisualStudio.Shell;
+using Microsoft.VisualStudio.Shell.Interop;
 
 namespace MicrosoftBandTools
 {
     [PackageRegistration(UseManagedResourcesOnly = true)]
     [InstalledProductRegistration("#110", "#112", Version, IconResourceID = 400)]
+    [ProvideAutoLoad(UIContextGuids80.SolutionExists)]
     [Guid(PackageGuidString)]
     public sealed class VSPackage : Package
     {
