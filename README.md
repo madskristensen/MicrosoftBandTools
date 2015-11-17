@@ -18,7 +18,7 @@ Band.
 1. Intellisense
   - Based on the schema
   - For custom icons
-2. Valdation
+2. Validation
   - Against the schema
   - Icon file paths
   - Undeclared icons
