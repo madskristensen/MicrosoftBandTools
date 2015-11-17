@@ -20,7 +20,10 @@ namespace MicrosoftBandTools
         public string GetSchemaFor(string fileLocation)
         {
             if (IsBandManifest(fileLocation))
+            {
+                Telemetry.TrackEvent("Schema applied");
                 return URL;
+            }
 
             return null;
         }

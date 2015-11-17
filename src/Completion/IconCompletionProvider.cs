@@ -31,6 +31,7 @@ namespace MicrosoftBandTools
                 yield break;
 
             string folder = Path.GetDirectoryName(member.JSONDocument.DocumentLocation);
+            Telemetry.TrackEvent("Icon completion");
 
             foreach (var icon in GetIcons(member))
             {

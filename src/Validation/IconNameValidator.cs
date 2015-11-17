@@ -37,6 +37,7 @@ namespace MicrosoftBandTools
                         Text = $"The icon \"{member.UnquotedValueText}\" has not been declared"
                     };
 
+                    Telemetry.TrackEvent("Icon no declared");
                     context.AddError(error);
                 }
             }

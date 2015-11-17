@@ -40,6 +40,7 @@ namespace MicrosoftBandTools
                         Text = $"The file \"{member.UnquotedValueText}\" does not exist"
                     };
 
+                    Telemetry.TrackEvent("Icon file missing");
                     context.AddError(error);
                 }
             }

@@ -2,11 +2,11 @@
 using System.Runtime.InteropServices;
 using MicrosoftBandTools;
 
-[assembly: AssemblyTitle("Microsoft Band Tools")]
+[assembly: AssemblyTitle(VSPackage.Title)]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("Mads Kristensen")]
-[assembly: AssemblyProduct("Microsoft Band Tools")]
+[assembly: AssemblyProduct(VSPackage.Title)]
 [assembly: AssemblyCopyright("")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
