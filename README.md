@@ -11,6 +11,9 @@ or get the
 [nightly build](http://vsixgallery.com/extension/74cd5721-9cfd-4183-b1c9-b051f1b59503/)
 
 ## Features
+The extension provides extra tooling for the **manifest.json**
+file which is used to create Web Tiles for the Microsoft
+Band.
 
 1. Intellisense
   - Based on the schema
