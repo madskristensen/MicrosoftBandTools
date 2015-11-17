@@ -3,7 +3,8 @@
     <Metadata>
         <Identity Id="74cd5721-9cfd-4183-b1c9-b051f1b59503" Version="1.0" Language="en-US" Publisher="Mads Kristensen" />
         <DisplayName>Microsoft Band Tools</DisplayName>
-        <Description xml:space="preserve">Provides Intellisense for Provides InteProvides Intellisense for writing Web Tiles for Microsoft Bandscription</Description>
+        <Description xml:space="preserve">Provides Intellisense and validation for writing Web Tiles for Microsoft Band 1 &amp; 2</Description>
+        <MoreInfo>https://github.com/madskristensen/MicrosoftBandTools</MoreInfo>
         <License>Resources\LICENSE</License>
         <Icon>Resources\Icon.png</Icon>
         <PreviewImage>Resources\Preview.png</PreviewImage>
