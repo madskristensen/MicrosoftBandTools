@@ -1,7 +1,9 @@
 ## Microsoft Band Tools for Visual Studio
 
 A Visual Studio extension that provides additional tooling
-for writing Web Tiles for the Microsoft Band.
+for writing
+[Web Tiles](https://developer.microsoftband.com/WebTile/)
+for the Microsoft Band.
 
 [![Build status](https://ci.appveyor.com/api/projects/status/k72bv74jviitnejx?svg=true)](https://ci.appveyor.com/project/madskristensen/microsoftbandtools)
 

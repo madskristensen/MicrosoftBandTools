@@ -30,10 +30,15 @@ namespace MicrosoftBandTools
             if (member == null || member.UnquotedNameText != "icon")
                 yield break;
 
+            var icons = GetIcons(member);
+
+            if (icons.Count == 0)
+                yield break;
+
             string folder = Path.GetDirectoryName(member.JSONDocument.DocumentLocation);
             Telemetry.TrackEvent("Icon completion");
 
-            foreach (var icon in GetIcons(member))
+            foreach (var icon in icons)
             {
                 string path = Path.Combine(folder, icon.Value);
 
@@ -55,13 +60,13 @@ namespace MicrosoftBandTools
             var dic = new Dictionary<string, string>();
 
             if (!item.JSONDocument.Accept(visitor))
-                return null;
+                return dic;
 
             var icons = visitor.Items.FirstOrDefault(m => m.UnquotedNameText == "icons");
             var value = icons?.Value as JSONObject;
 
             if (value == null)
-                return null;
+                return dic;
 
             string folder = Path.GetDirectoryName(item.JSONDocument.DocumentLocation);
 

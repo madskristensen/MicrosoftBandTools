@@ -1,7 +1,7 @@
 # Roadmap
 
 - [ ] Intellisense for variables
-- [ ] Validation for unknown variables
+- [x] Validation for unknown variables
 - [ ] Validation for unused variables
 
 Features that have a checkmark are complete and available for
