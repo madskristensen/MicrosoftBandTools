@@ -1,13 +1,12 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 14
-VisualStudioVersion = 14.0.23107.0
+VisualStudioVersion = 14.0.24720.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MicrosoftBandTools", "src\MicrosoftBandTools.csproj", "{3F988287-A3F0-4A0A-B74E-E9E08555CE5D}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{3BE31059-4A42-4547-9F46-BDBDA7E6DF22}"
 	ProjectSection(SolutionItems) = preProject
-		.gitignore = .gitignore
 		appveyor.yml = appveyor.yml
 		CHANGELOG.md = CHANGELOG.md
 		README.md = README.md
